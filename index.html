@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كتب كتاب أحمد خالد و رودينا أمين</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="music-control">
+        <div class="music-wrapper">
+            <button id="music-toggle">
+                <i class="fas fa-volume-up"></i>
+                <span>إيقاف</span>
+            </button>
+            <div id="music-status" class="music-status">الموسيقى تعمل</div>
+        </div>
+        <audio id="background-music" loop>
+            <source src="audio/Pirates of the Caribbean X Game of Thrones _ Piano_Violin Cover _ Eshan Denipitiya _ David Loke(MP3_160K).mp3" type="audio/mpeg">
+            <!-- Add your background music file here -->
+        </audio>
+    </div>
+
+    <div class="animation-container">
+        <div class="airplane">
+            <i class="fas fa-plane"></i>
+        </div>
+        <div class="balloons balloons-left">
+            <div class="balloon" style="--delay: 0s; --color: #FF5E5B;"></div>
+            <div class="balloon" style="--delay: 4s; --color: #B6E2D3;"></div>
+            <div class="balloon" style="--delay: 8s; --color: #FAD2E1;"></div>
+        </div>
+        <div class="balloons balloons-right">
+            <div class="balloon" style="--delay: 2s; --color: #D8A7B1;"></div>
+            <div class="balloon" style="--delay: 6s; --color: #EF7C8E;"></div>
+            <div class="balloon" style="--delay: 10s; --color: #FFB6C1;"></div>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p class="invitation-text">يشرفنا دعوتكم حضور احتفال خاص بزواج أحمد خالد و رودينا أمين حبه الأول والأخير 🕊️❤️</p>
+            <h1>أحمد ورودينا يبدأان رحلة العمر... وانت جزء منها</h1>
+             <div class="couple-names">
+                 <h2>العريس: أَحْمَد خَالِد</h2>
+                 <span class="and">و</span>
+                 <h2>العروسة: رُودِينَا أَمِين</h2>
+             </div>
+            <div class="couple-photo">
+                <img src="placeholder-couple.svg" alt="صورة العروسين">
+            </div>
+        </div>
+    </header>
+
+    <section class="countdown-section">
+        <h2>موعد الفرح</h2>
+        <div class="countdown" id="countdown">
+            <div class="countdown-item">
+                <span id="days">00</span>
+                <span class="countdown-label">🎈 أيام 🎈</span>
+            </div>
+            <div class="countdown-item">
+                <span id="hours">00</span>
+                <span class="countdown-label">💝 ساعات 💝</span>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">00</span>
+                <span class="countdown-label">🎊 دقائق 🎊</span>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">00</span>
+                <span class="countdown-label">🎀 ثواني 🎀</span>
+            </div>
+        </div>
+    </section>
+    
+    <section class="event-time-card">
+        <div class="time-card-content">
+            <div class="time-icon">🕰️</div>
+            <h2>موعد الحفل</h2>
+            <div class="time-details">
+                <p class="date">١١ نوفمبر ٢٠٢٥</p>
+                <p class="time">الساعة ٤ عصرًا</p>
+                <p class="duration">(مدة الحفل: ساعتين)</p>
+            </div>
+            <div class="qr-code-container">
+                <img src="qr-placeholder.svg" alt="QR Code" class="qr-code">
+                <p>امسح الكود لحفظ الموعد</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us">
+        <h2>💕 كلام من القلب 💕</h2>
+        <div class="heart-message">
+            <p>بيوتنا بُني على حب، وثقتنا في بعضنا بس نبدأ حياتنا الجديدة سوا. يوم 11 نوفمبر مش مجرد كتب كتاب... ده أول يوم في حياة جديدة نبنيها سوا، بحب، صبر، وتواصل.</p>
+            <p>في هذا اليوم المميز، نبدأ رحلة طويلة معًا، رحلة مليئة بالحب والأمل والتفاهم. نتعهد أمامكم أن نكون سندًا لبعضنا في السراء والضراء، وأن نبني بيتًا يملؤه الحب والسعادة.</p>
+            <p>نشكركم على مشاركتنا هذه اللحظات الخاصة، فوجودكم معنا يزيد من فرحتنا ويجعل هذا اليوم لا يُنسى.</p>
+            <div class="signature">
+                <span>أحمد ورودينا</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="celebration-details">
+        <h2>🎉 تفاصيل الاحتفال 🎉</h2>
+        <p>سنحتفل بهذا اليوم المميز بوجود أقرب الأصدقاء والعائلة معنا. سنلتقط الكثير من الصور التذكارية الجميلة ونستمتع سويًا بالموسيقى والأغاني طوال اليوم.</p>
+        <p>لا تنسوا إحضار ابتساماتكم وطاقتكم الإيجابية لنجعل هذا اليوم لا يُنسى!</p>
+        <div class="celebration-icons">
+            <div class="icon-item">
+                <i class="fas fa-camera"></i>
+                <span>صور تذكارية</span>
+            </div>
+            <div class="icon-item">
+                <i class="fas fa-music"></i>
+                <span>موسيقى وأغاني</span>
+            </div>
+            <div class="icon-item">
+                <i class="fas fa-users"></i>
+                <span>أحباب وعائلة</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="quran-verses" id="quran-verses">
+        <h2>📖 آيات قرآنية 📖</h2>
+        <div class="verse">
+            <p class="arabic">"وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ"</p>
+            <p class="verse-reference">الروم: 21</p>
+        </div>
+        <div class="verse">
+            <p class="arabic">"هُنَّ لِبَاسٌ لَّكُمْ وَأَنتُمْ لِبَاسٌ لَّهُنَّ"</p>
+            <p class="verse-reference">البقرة: 187</p>
+        </div>
+        <div class="verse">
+            <p class="arabic">"رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا"</p>
+            <p class="verse-reference">الفرقان: 74</p>
+        </div>
+        <button class="show-more-btn" id="show-more-verses">عرض المزيد من الآيات</button>
+        <div class="more-content" id="more-verses" style="display: none;">
+            <div class="verse">
+                <p class="arabic">"وَأَنكِحُوا الْأَيَامَىٰ مِنكُمْ وَالصَّالِحِينَ مِنْ عِبَادِكُمْ وَإِمَائِكُمْ ۚ إِن يَكُونُوا فُقَرَاءَ يُغْنِهِمُ اللَّهُ مِن فَضْلِهِ ۗ وَاللَّهُ وَاسِعٌ عَلِيمٌ"</p>
+                <p class="verse-reference">النور: 32</p>
+            </div>
+            <div class="verse">
+                <p class="arabic">"وَاللَّهُ جَعَلَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا وَجَعَلَ لَكُم مِّنْ أَزْوَاجِكُم بَنِينَ وَحَفَدَةً وَرَزَقَكُم مِّنَ الطَّيِّبَاتِ"</p>
+                <p class="verse-reference">النحل: 72</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="hadith-section" id="hadith-section">
+        <h2>🌙 أحاديث نبوية 🌙</h2>
+        <div class="verse">
+            <p class="arabic">"بارك الله لكما، وبارك عليكما، وجمع بينكما في خير"</p>
+            <p class="verse-reference">حديث شريف</p>
+        </div>
+        <div class="verse">
+            <p class="arabic">"ما استفاد المؤمن بعد تقوى الله خيراً له من زوجة صالحة، إن أمرها أطاعته، وإن نظر إليها سرته، وإن أقسم عليها أبرته، وإن غاب عنها حفظته في نفسها وماله"</p>
+            <p class="verse-reference">رواه ابن ماجه</p>
+        </div>
+        <button class="show-more-btn" id="show-more-hadith">عرض المزيد من الأحاديث</button>
+        <div class="more-content" id="more-hadith" style="display: none;">
+            <div class="verse">
+                <p class="arabic">"إذا خطب إليكم من ترضون دينه وخلقه فزوجوه، إلا تفعلوا تكن فتنة في الأرض وفساد عريض"</p>
+                <p class="verse-reference">رواه الترمذي</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="dua-section" id="dua-section">
+        <h2>🤲 أدعية للعروسين 🤲</h2>
+        <div class="verse">
+            <p class="arabic">"بارك الله لكما، وبارك عليكما، وجمع بينكما في خير"</p>
+        </div>
+        <div class="verse">
+            <p class="arabic">"اللهم ألف بين قلبيهما، وأصلح ذات بينهما، واهدهما سبل السلام، وأخرجهما من الظلمات إلى النور"</p>
+        </div>
+        <div class="verse">
+            <p class="arabic">"اللهم ارزقهما الذرية الصالحة، واجعلهما من المتحابين فيك، المتعاونين على البر والتقوى"</p>
+        </div>
+        <button class="show-more-btn" id="show-more-dua">عرض المزيد من الأدعية</button>
+        <div class="more-content" id="more-dua" style="display: none;">
+            <div class="verse">
+                <p class="arabic">"اللهم اجعل بيتهما عامراً بطاعتك، واجعل حياتهما سعيدة بذكرك، واجعل قلوبهما مطمئنة بالإيمان بك"</p>
+            </div>
+            <div class="verse">
+                <p class="arabic">"اللهم اجعل زواجهما مباركاً، واجعل نسلهما طيباً، واجعل بيتهما مباركاً، واجمع بينهما في الخير والبركة"</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="photos-section" id="photo-placeholder">
+        <h2>💌 تمنّى لنا خير 💌</h2>
+        <div class="photo-gallery">
+            <div class="photo-placeholder">
+                <div class="photo-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>💌 شاركونا تمنياتكم الطيبة 💌</h3>
+                <p>سنشارككم لحظاتنا السعيدة في هذا المكان</p>
+                <p>ترقبوا صور الحب والفرح والسعادة</p>
+            </div>
+            <div class="photo-placeholder">
+                <div class="photo-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>ذكريات ستبقى للأبد ❤️</h3>
+                <p>كل صورة تحكي قصة حب جميلة</p>
+                <p>انتظرونا قريبًا بأجمل اللحظات</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="guest-messages" id="guest-messages">
+        <h2>💌 تمنّى لنا خير 💌</h2>
+        <p>اكتب لنا دعاء، رسالة، أو نصيحة... واحفظها في ذاكرة فرحنا 🌟</p>
+
+        <div class="message-form">
+            <form id="message-form">
+                <div class="form-group">
+                    <label for="guest-name">اسمك:</label>
+                    <input type="text" id="guest-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="guest-message">رسالتك:</label>
+                    <textarea id="guest-message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">إرسال التمنية</button>
+            </form>
+        </div>
+
+        <div class="messages-container">
+            <h3>رسائل من الأحباء</h3>
+            <div id="messages-list"></div>
+        </div>
+    </section>
+
+    <section class="wedding-details" id="wedding-details">
+        <h2>✨ تفاصيل الزفاف ✨</h2>
+        <div class="details-card">
+            <div class="detail-item">
+                <i class="fas fa-calendar-day"></i>
+                <h3>ميني ويدينج نهاري</h3>
+                <p>الفرح مش تقليدي، ده ميني ويدينج صغير وناعم، عشان نبدأ حياتنا سوا من أول يوم.</p>
+            </div>
+            <div class="detail-item">
+                <i class="fas fa-child-slash"></i>
+                <h3>بدون أطفال</h3>
+                <p>الفرح ممنوع فيه الأطفال علشان نقدر نستمتع ونلتقط أجمل الصور بدون ضغوط.</p>
+            </div>
+            <div class="detail-item">
+                <i class="fas fa-tshirt"></i>
+                <h3>Dress Code رسمي</h3>
+                <p>رجالة: بدلة رسمية – سيدات: فستان رسمي</p>
+            </div>
+            <div class="detail-item">
+                <i class="fas fa-clock"></i>
+                <h3>الوقت</h3>
+                <p>الساعة 4 عصرًا، 11 نوفمبر 2025</p>
+            </div>
+            <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>المكان</h3>
+                <p>بيتنا الصغير – القاهرة (سيتم إرسال الموقع بالتحديد لاحقًا)</p>
+                <div class="qr-code">
+                    <img src="placeholder-qr.svg" alt="رمز QR للمكان">
+                    <p>امسح الكود علشان توصل للموقع بسهولة</p>
+                </div>
+            </div>
+            <div class="detail-item">
+                <i class="fab fa-telegram"></i>
+                <h3>جروب التلجرام</h3>
+                <p>هنشارك كل الصور والفيديوهات في جروب تلجرام:</p>
+                <p>t.me/ahmed_roudina_wedding</p>
+            </div>
+        </div>
+
+        <div class="important-notes" id="important-notes">
+            <h3>🤲 دعاء من القلب</h3>
+            <div class="note">
+                <i class="fas fa-pray"></i>
+                <div>
+                    <p>"اللهم اجعل بيننا مودة ورحمة، وبارك لنا فيما أعطيتنا، وارزقنا الصبر عند البلاء، والشكر عند النعمة، واجعلنا من عبادك الصالحين."</p>
+                </div>
+            </div>
+            <h3>🙏 نعتذر</h3>
+            <div class="note">
+                <i class="fas fa-heart"></i>
+                <div>
+                    <p>لو موصلكش الدعوة، بعتذر جداً... أنت فرد من عيلتنا، ومهم جداً ❤️</p>
+                    <p>لكن بسبب ضيق المكان، اضطررنا نعمل فرح صغير، بس نعدكم إننا هنحتفل معكم كلنا سوا قريب إن شاء الله!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 | صُنع بحب أحمد ❤️  لرودي</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

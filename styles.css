@@ -1,0 +1,1168 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+body {
+    font-family: 'Amiri', 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff9f9;
+    overflow-x: hidden;
+    text-align: right;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Amiri', 'Playfair Display', serif;
+    color: #333;
+}
+
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Invitation Text */
+.invitation-text {
+    font-size: 1.2rem;
+    color: #d8a7b1;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f1f8, #fff5f7);
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(216, 167, 177, 0.2);
+    border: 1px solid rgba(216, 167, 177, 0.3);
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #f8f1f8;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.heart-message p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.signature {
+    margin-top: 2rem;
+    font-family: 'Amiri', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #d8a7b1;
+}
+
+/* Event Time Card */
+.event-time-card {
+    background-color: #fff5f7;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(216, 167, 177, 0.2);
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 500px;
+    padding: 2rem;
+    border: 2px dashed #d8a7b1;
+}
+
+.time-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #d8a7b1;
+}
+
+.time-details {
+    margin: 1.5rem 0;
+}
+
+.time-details .date,
+.time-details .time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.time-details .duration {
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+}
+
+.qr-code-container {
+    margin-top: 1.5rem;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0.5rem;
+    border: 1px solid #eee;
+    padding: 0.5rem;
+    background-color: white;
+}
+
+.qr-code-container p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Celebration Details Section */
+.celebration-details {
+    background-color: #f8f1f8;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.celebration-details p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.celebration-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.icon-item i {
+    font-size: 2.5rem;
+    color: #d8a7b1;
+    margin-bottom: 0.5rem;
+}
+
+.icon-item span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Hadith and Dua Sections */
+.hadith-section, .dua-section {
+    background-color: #f9f5f6;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.hadith-section h2, .dua-section h2 {
+    color: #d8a7b1;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Photos Section */
+.photos-section {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.photo-placeholder {
+    background-color: #f9f9f9;
+    border: 2px dashed #d8a7b1;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.photo-placeholder:hover {
+    background-color: #fff5f7;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.photo-icon {
+    font-size: 3rem;
+    color: #d8a7b1;
+    margin-bottom: 1rem;
+}
+
+.photo-placeholder h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.photo-placeholder p {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Show More Buttons */
+.show-more-btn {
+    background-color: #d8a7b1;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin: 15px auto;
+    display: block;
+    cursor: pointer;
+    font-family: 'Amiri', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background-color: #c48b98;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.more-content {
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Music Control */
+.music-control {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.music-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#music-toggle {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #d8a7b1;
+    border-radius: 25px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-family: 'Amiri', serif;
+    color: #333;
+}
+
+#music-toggle i {
+    margin-left: 5px;
+    color: #d8a7b1;
+}
+
+#music-toggle span {
+    font-size: 0.9rem;
+}
+
+#music-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+}
+
+.music-status {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #666;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 3px 8px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Animations */
+.animation-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.airplane {
+    position: absolute;
+    font-size: 24px;
+    color: #6c757d;
+    animation: fly 30s linear infinite;
+    opacity: 0.7;
+    transform: rotate(45deg);
+}
+
+@keyframes fly {
+    0% {
+        top: 80%;
+        left: -50px;
+    }
+    100% {
+        top: 10%;
+        left: calc(100% + 50px);
+    }
+}
+
+.balloons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.balloons-left {
+    left: 0;
+    width: 20%;
+}
+
+.balloons-right {
+    right: 0;
+    width: 20%;
+}
+
+.balloon {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: var(--color);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: float 15s linear infinite;
+    animation-delay: var(--delay);
+    opacity: 0.7;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.balloon::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    background-color: #ddd;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.balloons-left .balloon {
+    animation: floatLeft 15s linear infinite;
+}
+
+.balloons-right .balloon {
+    animation: floatRight 15s linear infinite;
+}
+
+@keyframes floatLeft {
+    0% {
+        bottom: -100px;
+        left: 10%;
+    }
+    100% {
+        bottom: 100%;
+        left: 5%;
+    }
+}
+
+@keyframes floatRight {
+    0% {
+        bottom: -100px;
+        right: 10%;
+    }
+    100% {
+        bottom: 100%;
+        right: 5%;
+    }
+}
+
+@keyframes float {
+    0% {
+        bottom: -100px;
+        left: calc(10% + (80% * var(--delay) / 10s));
+    }
+    100% {
+        bottom: 100%;
+        left: calc(10% + (80% * var(--delay) / 10s) + 50px);
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('placeholder-bg.svg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.decorations {
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    letter-spacing: 5px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #d8a7b1;
+}
+
+.couple-names {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    flex-direction: row-reverse;
+}
+
+.couple-names h2 {
+    font-size: 2rem;
+    margin: 0 1rem;
+}
+
+.and {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #d8a7b1;
+    margin: 0 1rem;
+}
+
+.couple-photo {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.couple-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Countdown Section */
+.countdown-section {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    position: relative;
+    z-index: 2;
+    padding: 30px 20px;
+    max-width: 800px;
+}
+
+.countdown-section h2 {
+    margin-bottom: 2rem;
+    color: #d8a7b1;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.countdown-section h2:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #d8a7b1;
+    bottom: 0;
+    left: 25%;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    min-width: 100px;
+}
+
+.countdown-item span:first-child {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    background-color: #f8f9fa;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #d8a7b1;
+    transition: all 0.3s ease;
+}
+
+.countdown-update {
+    animation: pulse 0.5s ease-in-out;
+    background-color: #d8a7b1 !important;
+    color: white !important;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.countdown-label {
+    font-size: 1.1rem;
+    color: #d8a7b1;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+}
+
+.wedding-date {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #d8a7b1;
+}
+
+/* About Us Section */
+.about-us {
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.about-us h2 {
+    margin-bottom: 1.5rem;
+    color: #d8a7b1;
+}
+
+.about-us p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Quran Verses Section */
+.quran-verses {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.quran-verses h2 {
+    margin-bottom: 2rem;
+    color: #d8a7b1;
+}
+
+.verse {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.arabic {
+    font-size: 1.5rem;
+    line-height: 2;
+    margin-bottom: 1rem;
+    direction: rtl;
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+.translation {
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Photos Section (Previously Prayers) */
+.prayers {
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.prayers h2 {
+    margin-bottom: 2rem;
+    color: #d8a7b1;
+}
+
+.prayer {
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    font-size: 1.2rem;
+}
+
+.prayer p {
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* Guest Messages Section */
+.guest-messages {
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.guest-messages h2 {
+    margin-bottom: 1rem;
+    color: #d8a7b1;
+}
+
+.guest-messages > p {
+    margin-bottom: 2rem;
+}
+
+.message-templates {
+    margin-bottom: 2rem;
+}
+
+.message-templates h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.template-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.template-btn {
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.template-btn:hover {
+    background-color: #e9ecef;
+}
+
+.message-form {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 0.75rem 2rem;
+    background-color: #d8a7b1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #c69aa4;
+}
+
+.messages-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.messages-container h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+#messages-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.message-card {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: right;
+    position: relative;
+}
+
+.message-card .guest-name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #d8a7b1;
+    text-align: right;
+}
+
+.message-card .message-text {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.message-card .message-actions {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.message-card .edit-btn,
+.message-card .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.message-card .edit-btn:hover,
+.message-card .delete-btn:hover {
+    color: #333;
+}
+
+/* Wedding Details Section */
+.wedding-details {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.wedding-details h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #d8a7b1;
+}
+
+.details-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.detail-item {
+    flex: 1 1 300px;
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    direction: rtl;
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item:hover {
+    transform: translateY(-5px);
+}
+
+.detail-item i {
+    font-size: 2rem;
+    color: #e83e8c;
+    margin-bottom: 1rem;
+}
+
+.detail-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.detail-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.qr-code {
+    margin-top: 1.5rem;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0.5rem;
+}
+
+.important-notes {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.important-notes h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.note {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    flex-direction: row-reverse;
+}
+
+.note i {
+    font-size: 1.5rem;
+    color: #e83e8c;
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+.note p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #333;
+    color: #fff;
+    direction: rtl;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #adb5bd;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+
+    .invitation-text {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .couple-names h2 {
+        font-size: 1.5rem;
+    }
+
+    .and {
+        font-size: 2rem;
+    }
+
+    .couple-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .countdown {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .countdown-item {
+        min-width: 120px;
+    }
+
+    .countdown-item span:first-child {
+        font-size: 2rem;
+        width: 60px;
+        height: 60px;
+    }
+
+    .arabic {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    .heart-message p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .event-time-card {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .time-details .date,
+    .time-details .time {
+        font-size: 1.3rem;
+    }
+
+    .music-wrapper {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .balloons-left,
+    .balloons-right {
+        width: 15%;
+    }
+
+    .balloon {
+        width: 25px;
+        height: 35px;
+    }
+
+    .note {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .hero-content {
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .invitation-text {
+        font-size: 0.9rem;
+        padding: 0.7rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .couple-names {
+        margin: 1.5rem 0;
+    }
+
+    .couple-names h2 {
+        font-size: 1.3rem;
+        margin: 0.5rem 0;
+    }
+
+    .countdown {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .countdown-item {
+        width: 45%;
+        margin-bottom: 1rem;
+    }
+
+    .countdown-item span:first-child {
+        font-size: 1.8rem;
+        width: 55px;
+        height: 55px;
+    }
+
+    .countdown-label {
+        font-size: 0.9rem;
+    }
+
+    .about-us {
+        padding: 2rem 1rem;
+    }
+
+    .heart-message p {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .event-time-card {
+        margin: 0.5rem;
+        padding: 1.2rem;
+    }
+
+    .time-icon {
+        font-size: 2.5rem;
+    }
+
+    .time-details .date,
+    .time-details .time {
+        font-size: 1.2rem;
+    }
+
+    .arabic {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+
+    .verse-reference {
+        font-size: 0.9rem;
+    }
+
+    .show-more-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .photo-gallery {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .photo-placeholder {
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .music-control {
+        padding: 0.8rem;
+    }
+
+    #music-toggle {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .balloons-left,
+    .balloons-right {
+        width: 12%;
+    }
+
+    .balloon {
+        width: 20px;
+        height: 30px;
+    }
+
+    .template-buttons {
+        flex-direction: column;
+    }
+
+    .template-btn {
+        width: 100%;
+    }
+
+    #messages-list {
+        grid-template-columns: 1fr;
+    }
+
+    .details-card {
+        grid-template-columns: 1fr;
+    }
+}
