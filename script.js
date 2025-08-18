@@ -241,3 +241,110 @@ function setupSmoothScroll() {
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
+
+
+// ==================== توصيل بـ Supabase ====================
+const SUPABASE_URL = 'https://tfpriseymwxfdoiunzpv.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmcHJpc2V5bXd4ZmRvaXVuenB2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU1NDAzNTEsImV4cCI6MjA3MTExNjM1MX0.ABd1Kl_lTV60sSzf-NY7PN0LFq5XIgajS9aerC9nSCM';
+
+// استيراد مكتبة Supabase (من CDN)
+const { createClient } = supabase;
+
+const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// ==================== إرسال الرسالة ====================
+async function submitMessage(name, message) {
+    const { data, error } = await supabaseClient
+        .from('messages')
+        .insert([{ name, message }]);
+
+    if (error) {
+        console.error('خطأ في الإرسال:', error);
+        return false;
+    }
+    return true;
+}
+
+// ==================== جلب الرسائل وعرضها ====================
+async function loadMessages() {
+    const { data, error } = await supabaseClient
+        .from('messages')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+    const messagesList = document.getElementById('messages-list');
+    if (!messagesList) return;
+
+    if (error) {
+        messagesList.innerHTML = '<p style="color: red;">فشل تحميل الرسائل. حاول لاحقًا.</p>';
+        console.error('خطأ في جلب الرسائل:', error);
+        return;
+    }
+
+    if (data.length === 0) {
+        messagesList.innerHTML = '<p>لا توجد رسائل بعد. كن أول من يرسل تهاني!</p>';
+        return;
+    }
+
+    messagesList.innerHTML = '';
+    data.forEach(msg => {
+        const msgEl = document.createElement('div');
+        msgEl.className = 'guest-message-item';
+        msgEl.innerHTML = `
+            <div class="message-header">
+                <strong>${escapeHtml(msg.name)}</strong>
+                <span class="message-time">${new Date(msg.created_at).toLocaleString('ar')}</span>
+            </div>
+            <p class="message-text">${escapeHtml(msg.message)}</p>
+        `;
+        messagesList.appendChild(msgEl);
+    });
+}
+
+// ==================== منع XSS بسيط ====================
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// ==================== معالجة إرسال النموذج ====================
+document.getElementById('message-form')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const nameInput = document.getElementById('guest-name');
+    const messageInput = document.getElementById('guest-message');
+    const submitBtn = e.target.querySelector('.submit-btn');
+
+    const name = nameInput.value.trim();
+    const message = messageInput.value.trim();
+
+    if (!name || !message) {
+        alert('من فضلك املأ الاسم والرسالة.');
+        return;
+    }
+
+    // تعطيل الزر مؤقتًا
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'جاري الإرسال...';
+
+    const success = await submitMessage(name, message);
+
+    if (success) {
+        alert('تم إرسال رسالتك بنجاح! شكرًا لك ❤️');
+        nameInput.value = '';
+        messageInput.value = '';
+        await loadMessages(); // تحديث القائمة
+    } else {
+        alert('فشل الإرسال. تأكد من الاتصال أو حاول لاحقًا.');
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'إرسال التمنية';
+});
+
+// ==================== تحميل الرسائل عند فتح الصفحة ====================
+document.addEventListener('DOMContentLoaded', () => {
+    // ... الكود القديم
+    loadMessages(); // تحميل الرسائل بمجرد تحميل الصفحة
+});

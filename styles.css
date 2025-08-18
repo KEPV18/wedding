@@ -600,20 +600,7 @@ section {
 }
 
 /* ==================== Guest Messages ==================== */
-.guest-messages {
-    background-color: #fff;
-    border-radius: 10px;
-    text-align: center;
-}
 
-.guest-messages h2 {
-    margin-bottom: 1rem;
-    color: #d8a7b1;
-}
-
-.guest-messages > p {
-    margin-bottom: 2rem;
-}
 
 .message-form {
     max-width: 600px;
@@ -1000,5 +987,196 @@ footer p {
     .photo-placeholder {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+
+/* ==================== Guest Messages - Updated & Unified ==================== */
+.guest-messages {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(216, 167, 177, 0.1);
+    margin: 3rem auto;
+    padding: 3rem 2rem;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(216, 167, 177, 0.2);
+}
+
+.guest-messages h2 {
+    color: #d8a7b1;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Amiri', 'Playfair Display', serif;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.guest-messages h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d8a7b1, transparent);
+    border-radius: 2px;
+}
+
+.guest-messages > p {
+    color: #555;
+    font-size: 1.1rem;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+/* تنسيق حاوية الرسائل */
+.messages-container {
+    margin-top: 2rem;
+    padding: 20px;
+    background: #fffaf0;
+    border-radius: 14px;
+    border: 1px dashed #d8a7b1;
+    box-shadow: 0 4px 12px rgba(216, 167, 177, 0.15);
+}
+
+.messages-container h3 {
+    font-size: 1.6em;
+    color: #c12a72;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Amiri', serif;
+}
+
+/* قائمة الرسائل */
+#messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+/* كل رسالة */
+.guest-message-item {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #f0e6f6;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+    direction: rtl;
+    text-align: right;
+}
+
+.guest-message-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: #e8c5d5;
+}
+
+/* رأس الرسالة (الاسم والوقت) */
+.guest-message-item .message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    border-bottom: 1px dashed #f0e6f6;
+    padding-bottom: 6px;
+}
+
+.guest-message-item .message-header strong {
+    color: #d8a7b1;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.guest-message-item .message-time {
+    font-size: 0.85em;
+    color: #777;
+    font-style: italic;
+    background: #f8f9fa;
+    padding: 2px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+/* نص الرسالة */
+.guest-message-item .message-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+/* تأثير زهرة في الزاوية */
+.guest-message-item::before {
+    content: "💐";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 18px;
+    opacity: 0.7;
+    animation: float-flower 3s infinite alternate ease-in-out;
+}
+
+@keyframes float-flower {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+
+/* للهواتف */
+@media (max-width: 768px) {
+    .guest-messages {
+        margin: 2rem auto;
+        padding: 2rem 1rem;
+    }
+
+    .guest-messages h2 {
+        font-size: 1.7rem;
+    }
+
+    .guest-messages > p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .messages-container {
+        padding: 15px;
+    }
+
+    .guest-message-item .message-header {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+    }
+
+    .guest-message-item .message-time {
+        background: #eee;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .guest-messages h2 {
+        font-size: 1.5rem;
+    }
+
+    .guest-message-item {
+        padding: 14px;
+    }
+
+    .guest-message-item .message-text {
+        font-size: 1em;
     }
 }

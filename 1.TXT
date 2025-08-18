@@ -1,0 +1,11 @@
+https://tfpriseymwxfdoiunzpv.supabase.co
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmcHJpc2V5bXd4ZmRvaXVuenB2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU1NDAzNTEsImV4cCI6MjA3MTExNjM1MX0.ABd1Kl_lTV60sSzf-NY7PN0LFq5XIgajS9aerC9nSCM
+
+
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://tfpriseymwxfdoiunzpv.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
